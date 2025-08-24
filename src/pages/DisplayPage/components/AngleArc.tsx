@@ -26,11 +26,9 @@ const AngleArc: React.FC<AngleArcProps> = ({
   const u1 = { x: v1.x / len1, y: v1.y / len1 };
   const u2 = { x: v2.x / len2, y: v2.y / len2 };
 
-  // arc endpoints
   const start = { x: vertex.x + u1.x * radius, y: vertex.y + u1.y * radius };
   const end = { x: vertex.x + u2.x * radius, y: vertex.y + u2.y * radius };
 
-  // sweep flag
   const cross = u1.x * u2.y - u1.y * u2.x;
   const sweep = cross < 0 ? 0 : 1;
 
